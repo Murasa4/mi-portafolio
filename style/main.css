@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    background-image: url('../assets/img/fondosunretrowave.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Para efecto parallax */
+    font-family: 'Courier New', monospace; /* Opcional para estética retro */
+}
+
+
+.class-nav-header ul {
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    align-items: center;
+}
+
+.class-nav-header li {
+    margin: 0 25px;
+}
+
+.div-rigth {
+    display: flex;
+    margin-left: auto; /* Empuja el grupo a la derecha */
+}
