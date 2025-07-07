@@ -113,8 +113,8 @@ main {
 
 .div-contenedor-img-circulo {
     position: relative;
-    width: 707px;
-    height: 707px;
+    width: 500px;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,8 +123,8 @@ main {
 /* Círculo exterior desenfocado */
 .contorno {
     position: absolute;
-    width: 707px;
-    height: 707px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
     border: 50px solid #ff00ff; /* neón magenta */
     filter: blur(50px);    
@@ -134,19 +134,19 @@ main {
 /* Círculo interior visible */
 .eclipse {
     position: absolute;
-    width: 707px;
-    height: 707px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
-    border: 37px solid rgba(0, 255, 255, 0.6); /* cian neón translúcido */
+    border: 37px solid rgba(104, 52, 17, 0.5); /* cian neón translúcido */
     z-index: 1;
 }
 
 /* Imagen en el centro */
 .imagen-perfil {
-    width: 470px;
-    height: 643px;
+    width: 350px;
+    height: 500px;
     background: url(./assets/img/1-removebg-preview.png) no-repeat center/cover;
-    border-radius: 150px;
+    border-radius: 200px;
     z-index: 0;
     filter: brightness(0.6); /* 1 es normal, <1 más oscuro, >1 más claro */
 }
