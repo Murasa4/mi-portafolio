@@ -6,31 +6,215 @@
 
 html {
     font-size: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 body {
-    background-image: url('../assets/img/fondosunretrowave.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* Para efecto parallax */
-    font-family: 'Courier New', monospace; /* Opcional para estética retro */
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+
+    min-height: 100vh;
+    background-image: url(../assets/img/loficity.jpg);
+    background-repeat: repeat-x; /* repetir solo en horizontal */
+    background-size: auto 100%;  /* ajusta el alto para que ocupe toda la altura */
+
+  animation: moverFondo 20s linear infinite; /* 20 segundos, movimiento lineal infinito */
+    /*background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* fondo base oscuro */
+    animation: cyberpunkBg 60s ease infinite;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+@keyframes cyberpunkBg {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+.header {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+main {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex: 1; /* esto hace que el main crezca y empuje el footer */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.div-rigth a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    transition: transform 0.2s ease, color 0.2s ease;
+    display: inline-block;
+}
+
+.div-rigth a:hover {
+    color: #e400ce;
+    transform: scale(1.2);
 }
 
 
 .class-nav-header ul {
     display: flex;
     list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     padding: 0px;
     margin: 0px;
     align-items: center;
+    
+}
+
+
+
+
+
+.div-rigth ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
 }
 
 .class-nav-header li {
     margin: 0 25px;
 }
 
-.div-rigth {
+
+.div-contenedor-img-circulo {
+    position: relative;
+    width: 707px;
+    height: 707px;
     display: flex;
-    margin-left: auto; /* Empuja el grupo a la derecha */
+    justify-content: center;
+    align-items: center;
 }
+
+/* Círculo exterior desenfocado */
+.contorno {
+    position: absolute;
+    width: 707px;
+    height: 707px;
+    border-radius: 50%;
+    border: 50px solid #ff00ff; /* neón magenta */
+    filter: blur(50px);    
+    z-index: 0;
+}
+
+/* Círculo interior visible */
+.eclipse {
+    position: absolute;
+    width: 707px;
+    height: 707px;
+    border-radius: 50%;
+    border: 37px solid rgba(0, 255, 255, 0.6); /* cian neón translúcido */
+    z-index: 1;
+}
+
+/* Imagen en el centro */
+.imagen-perfil {
+    width: 470px;
+    height: 643px;
+    background: url(./assets/img/1-removebg-preview.png) no-repeat center/cover;
+    border-radius: 150px;
+    z-index: 0;
+    filter: brightness(0.6); /* 1 es normal, <1 más oscuro, >1 más claro */
+}
+
+/*Footer*/
+.footer {
+    width: 100%;
+    height: 10%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between; /* separa izquierda y derecha */
+    align-items: center;
+    flex-wrap: wrap; /* por si en pantallas chicas se rompe */
+}
+
+.bloque-nombre {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* alinea el texto a la izquierda */
+    color: #fff;
+}
+
+.nombre-mio {
+    margin: 2px 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 20px;
+}
+
+    .redes-sociales a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    transition: transform 0.2s, color 0.2s;
+}
+
+
+.redes-sociales a:hover {
+    color: #e400ce;
+    transform: scale(1.2);
+}
+
+/* Línea vertical entre los dos bloques */
+.linea-separadora {
+    width: 80%;
+    height: 2px;
+    background-color: #e400ce;
+    border-radius: 2px;
+}
+
+.violeta {
+    color: #e400ce; /* o el violeta que prefieras */
+    font-weight: bold;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+
+
