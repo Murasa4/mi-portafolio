@@ -37,20 +37,41 @@
         </div>
 
         <ul class="div-rigth">
-        <li><a href="#inicio">Home</a></li>
-        <li><a href="#aboutme">About me</a></li>
-        <li><a href="#proyectos">Projects</a></li>
-        <li><a href="#contacto">Contact</a></li>
+        <li><a href="#" onclick="mostrarSeccion('home')">Home</a></li>
+        <li><a href="#" onclick="mostrarSeccion('about')">About me</a></li>
+        <li><a href="#" onclick="mostrarSeccion('projects')">Projects</a></li>
+        <li><a href="#" onclick="mostrarSeccion('herramientas')">Herramientas</a></li>
+        <li><a href="#">Contact</a></li>
         </ul>
     </nav>
     </header>
 
     <main>
-        <div class="div-contenedor-img-circulo">
+        <div id="inicio" class="div-contenedor-img-circulo">
                     <img src="./assets/img/1-removebg-preview.png" alt="Foto Perfil JDLS" class="imagen-perfil" />
                     <div class="eclipse"></div>
                     <div class="contorno"></div>
         </div>
+
+
+        <div id="cuadro-central">
+            <div class="barra-lateral">
+                <img src="assets/img/1-removebg-preview.png" alt="Foto de perfil" class="foto-perfil">
+
+                <div id="mini-about" class="mini-seccion" title="About Me" onclick="mostrarSeccion('about')">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div id="mini-projects" class="mini-seccion" title="Projects" onclick="mostrarSeccion('projects')">
+                    <i class="fa-solid fa-house-laptop"></i>
+                </div>
+                <div id="mini-herramientas" class="mini-seccion" title="herramientas" onclick="mostrarSeccion('herramientas')">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                </div>
+                </div>
+
+            <div class="contenido-cuadro" id="contenido-cuadro"></div>
+        </div>
+
     </main>
     
 
