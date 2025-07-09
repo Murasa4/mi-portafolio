@@ -22,15 +22,15 @@ body {
 
 
     min-height: 100vh;
-    background-image: url(../assets/img/loficity.jpg);
+    background-image: url(../assets/img/theclimber4.png);
     background-repeat: repeat-x; /* repetir solo en horizontal */
-    background-size: auto 100%;  /* ajusta el alto para que ocupe toda la altura */
+    background-size: cover;  /* ajusta el alto para que ocupe toda la altura */
 
-  animation: moverFondo 20s linear infinite; /* 20 segundos, movimiento lineal infinito */
+  animation: moverFondo 60s linear infinite; /* 20 segundos, movimiento lineal infinito */
     /*background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* fondo base oscuro */
     animation: cyberpunkBg 60s ease infinite;
     color: #fff;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'DotGothic16', sans-serif;
     overflow-x: hidden;
 }
 
@@ -66,10 +66,15 @@ main {
 .div-rigth a {
     text-decoration: none;
     color: #fff;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'DotGothic16', sans-serif;
     font-size: 18px;
     transition: transform 0.2s ease, color 0.2s ease;
     display: inline-block;
+
+    border: 1px solid #e0e0e0;
+    padding: 0.2rem;
+    background-color: #1f1f1f;
+    box-shadow: 0 0 0 4px #121212;
 }
 
 .div-rigth a:hover {
@@ -126,9 +131,12 @@ main {
     width: 500px;
     height: 500px;
     border-radius: 50%;
-    border: 50px solid #ff00ff; /* neón magenta */
+    border: 50px solid #e0e0e0;
     filter: blur(50px);    
     z-index: 0;
+
+    
+    
 }
 
 /* Círculo interior visible */
@@ -137,7 +145,7 @@ main {
     width: 500px;
     height: 500px;
     border-radius: 50%;
-    border: 37px solid rgba(104, 52, 17, 0.5); /* cian neón translúcido */
+    border: 37px solid rgba(31, 31, 31, 0.5); /* cian neón translúcido */
     z-index: 1;
 }
 
@@ -167,20 +175,31 @@ main {
     flex-direction: column;
     align-items: flex-start; /* alinea el texto a la izquierda */
     color: #fff;
+    
+    border: 2px solid #e0e0e0;
+    padding: 0.2rem;
+    background-color: #1f1f1f;
+    box-shadow: 0 0 0 4px #121212;
 }
 
 .nombre-mio {
     margin: 2px 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'DotGothic16', sans-serif;
     font-size: 16px;
 }
 
 .redes-sociales {
     display: flex;
     gap: 20px;
+    
+    border: 2px solid #e0e0e0;
+    padding: 0.4rem;
+    background-color: #1f1f1f;
+    box-shadow: 0 0 0 4px #121212;
 }
 
     .redes-sociales a {
+        
     color: #fff;
     font-size: 24px;
     text-decoration: none;
@@ -199,6 +218,11 @@ main {
     height: 2px;
     background-color: #e400ce;
     border-radius: 2px;
+
+    border: 0.5px solid #e0e0e0;
+    padding: 0.1rem;
+    background-color: #1f1f1f;
+    box-shadow: 0 0 0 4px #121212;
 }
 
 .violeta {
@@ -225,10 +249,10 @@ main {
     
     width: 80vw;
     height: 80vh;
-    background-color: #42214b;
+    /*background-color: #42214b;*/
     border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 0 30px rgba(255, 0, 200, 0.3);
+    /*padding: 20px;*/
+    /*box-shadow: 0 0 30px rgba(255, 0, 200, 0.3);*/
     
     display: flex;
     flex-direction: row;
@@ -236,6 +260,12 @@ main {
     opacity: 0;
     transition: opacity 0.4s ease, transform 0.4s ease;
     pointer-events: none;
+
+
+    border: 2px solid #e0e0e0;
+    padding: 1rem;
+    background-color: #1f1f1f;
+    box-shadow: 0 0 0 4px #121212;
 }
 
 #cuadro-central.visible {
@@ -329,4 +359,17 @@ main {
 .texto-seccion {
     max-width: 600px;
     text-align: center;
+}
+
+#slime-overlay {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background-color: #1f1f1f;
+    border-radius: 50%;
+    z-index: 9999;
+    transform: scale(1);
+    opacity: 0;
+    transition: all 0.6s ease;
+    pointer-events: none;
 }

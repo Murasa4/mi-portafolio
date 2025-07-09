@@ -8,6 +8,11 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Portafolio Web</title>
 
+    <!-- Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+
     <!-- css y js -->
     <link rel="stylesheet" href="style/main.css">
     <script src="scripts/main.js" defer></script>
@@ -37,10 +42,11 @@
         </div>
 
         <ul class="div-rigth">
-        <li><a href="#" onclick="mostrarSeccion('home')">Home</a></li>
-        <li><a href="#" onclick="mostrarSeccion('about')">About me</a></li>
-        <li><a href="#" onclick="mostrarSeccion('projects')">Projects</a></li>
-        <li><a href="#" onclick="mostrarSeccion('herramientas')">Herramientas</a></li>
+        <li><a href="#" onclick="mostrarSeccion('home', event)">Home</a></li>
+        <li><a href="#" onclick="mostrarSeccion('about', event)">About me</a></li>
+        <li><a href="#" onclick="mostrarSeccion('projects', event)">Projects</a></li>
+        <li><a href="#" onclick="mostrarSeccion('herramientas', event)">Tools</a></li>
+
         <li><a href="#">Contact</a></li>
         </ul>
     </nav>
@@ -67,7 +73,11 @@
                 <div id="mini-herramientas" class="mini-seccion" title="herramientas" onclick="mostrarSeccion('herramientas')">
                     <i class="fa-solid fa-screwdriver-wrench"></i>
                 </div>
+
+                <div id="mini-certificado" class="mini-seccion" title="certificado" onclick="mostrarSeccion('certificado'), event">
+                    <i class="fa-solid fa-medal"></i>
                 </div>
+            </div>
 
             <div class="contenido-cuadro" id="contenido-cuadro"></div>
         </div>
@@ -92,6 +102,8 @@
             </div>
     </footer>
 
+
+    <div id="slime-overlay"></div>
 </body>
 </html>
 
