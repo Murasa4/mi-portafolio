@@ -184,7 +184,7 @@ hr {
 
 /* Scroll vertical en contenedores de proyectos */
 .lista-proyectos {
-    max-height: 300px;
+    max-height: 500px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
@@ -195,7 +195,7 @@ hr {
 }
 
 .lista-mini-proyectos {
-    max-height: 300px;
+    max-height: 500px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
@@ -213,7 +213,11 @@ hr {
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    height: 120px;
+    height: 300px;
+}
+
+.mini-proyecto-card h3 {
+    padding: 25px;
 }
 
 /* Card mini proyecto */
@@ -228,14 +232,16 @@ hr {
     cursor: pointer;
     position: relative;
     transition: transform 0.3s;
+    font-weight: bold;
+    height: 300px;
 }
 .mini-proyecto-card:hover {
     transform: scale(1.05);
 }
 
 .tech-icons img {
-    width: 24px;
-    height: 24px;
+    width: 48px;
+    height: 48px;
     margin: 0 5px;
 }
 
@@ -246,6 +252,28 @@ hr {
     font-size: 1.5rem;
     color: #fff;
 }
+
+/* Miniaturas */
+.thumbnails {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.thumb {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.thumb:hover {
+    transform: scale(1.1);
+}
+
+
 
 /* Modal */
 .modal {
