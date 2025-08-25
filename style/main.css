@@ -33,7 +33,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;   /* sigue centrado vertical */
-    align-items: flex-start;   /* 🔑 alinea a la izquierda */
+    align-items: center;   /* 🔑 alinea a la izquierda */
     gap: 20px;
     text-align: left;          /* 🔑 texto alineado a la izquierda */
     position: relative;
@@ -49,7 +49,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background: url("/assets/img/NicePng_crazy-diamond-png_2008883.png") no-repeat right center;
+background: url("/assets/img/NicePng_crazy-diamond-png_2008883.png") no-repeat center;
 background-size: contain;  /* se ajusta sin deformar */
 opacity: 0.3; /* le baja la intensidad */
 z-index: -1; /* por debajo del contenedor */
