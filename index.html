@@ -76,7 +76,7 @@
 <div class="secciones-pantalla">
     <!-- Sección Proyectos -->
     <section class="proyectos">
-        <h2>Mis Proyectos</h2>
+        <h2>Proyectos</h2>
         <div id="proyectos1" class="lista-proyectos">
             <div class="proyecto-card">Proyecto 1</div>
             <div class="proyecto-card">Proyecto 2</div>
@@ -91,7 +91,21 @@
     <section class="mini-proyectos">
         <h2>Mini Proyectos</h2>
         <div class="lista-mini-proyectos">
-            <div class="mini-proyecto-card">Mini 1</div>
+
+            <div class="mini-proyecto-card" data-images='["./assets/img/proyecto1-img1.png","./assets/img/proyecto1-img2.png"]'>
+            <h3>Mini 1</h3>
+            <div class="tech-icons">
+                <img src="./assets/icons/java.png" alt="Java" title="Java">
+                <img src="./assets/icons/html.png" alt="HTML" title="HTML">
+            </div>
+            <a href="https://github.com/Murasa4/mi-proyecto1" target="_blank" class="github-link">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+
+
+
+
             <div class="mini-proyecto-card">Mini 2</div>
             <div class="mini-proyecto-card">Mini 3</div>
             <div class="mini-proyecto-card">Mini 4</div>
@@ -101,7 +115,13 @@
 </div>
 
 
-
+<!-- Modal para imágenes -->
+<div id="modal-proyecto" class="modal">
+    <span class="close">&times;</span>
+    <img id="modal-img" src="" alt="Referencia del proyecto">
+    <button id="prev">◀</button>
+    <button id="next">▶</button>
+</div>
 
 </body>
 </html>

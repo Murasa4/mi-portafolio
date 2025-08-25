@@ -195,9 +195,9 @@ hr {
 }
 
 .lista-mini-proyectos {
-    max-height: 200px;
+    max-height: 300px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 10px;
     overflow-y: auto;
     padding: 10px;
@@ -216,12 +216,76 @@ hr {
     height: 120px;
 }
 
+/* Card mini proyecto */
 .mini-proyecto-card {
     background: rgba(255,255,255,0.15);
-    border-radius: 10px;
+    border-radius: 12px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s;
+}
+.mini-proyecto-card:hover {
+    transform: scale(1.05);
+}
+
+.tech-icons img {
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+}
+
+.github-link {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
     justify-content: center;
     align-items: center;
-    font-size: 0.9rem;
-    height: 80px;
 }
+
+#modal-img {
+    max-height: 80%;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+#prev, #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#prev { left: 20px; }
+#next { right: 20px; }
+
