@@ -1,330 +1,125 @@
+/* Reseteo básico */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
 }
 
 html {
-    font-size: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    
+    scroll-behavior: smooth;
 }
+
 
 body {
-    width: 100vw;
-    height: 100vh;
+    background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+    font-family: "Arial", sans-serif;
+    color: #fff;
     margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
+}
 
-
+/* Contenedor centrado */
+.contenedor {
     min-height: 100vh;
-    background-image: url(../assets/img/theclimber4.png);
-    background-repeat: repeat-x; /* repetir solo en horizontal */
-    background-size: cover;  /* ajusta el alto para que ocupe toda la altura */
-
-  animation: moverFondo 60s linear infinite; /* 20 segundos, movimiento lineal infinito */
-    /*background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* fondo base oscuro */
-    animation: cyberpunkBg 60s ease infinite;
-    color: #fff;
-    font-family: 'DotGothic16', sans-serif;
-    overflow-x: hidden;
-}
-
-@keyframes cyberpunkBg {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-
-.header {
-    width: 100%;
-    height: 10%;
+    justify-content: center; /* centra vertical */
     display: flex;
-    justify-content: flex-end;
-    padding: 20px 40px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
+    flex-direction: column;      /* elementos en columna */
+    align-items: center;         /* centra horizontal dentro del contenedor */
+    gap: 20px;                   /* espacio entre logo, h1, h5, redes */
+    text-align: center;
 }
 
-main {
-    width: 100%;
-    height: 80%;
-    display: flex;
-    flex: 1; /* esto hace que el main crezca y empuje el footer */
-    justify-content: center;
-    align-items: center;
-    position: relative;
+/* Nombre principal */
+h1 {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    margin: .67em 0;
+    line-height: 1.1;
+    color: inherit;
+    margin-bottom: 10px;
+    font-family: "Dosis", arial, tahoma, verdana;
+    font-weight: 300;
+    font-size: 84px;
+    margin-top: 0;
 }
 
-.div-rigth a {
-    text-decoration: none;
-    color: #fff;
-    font-family: 'DotGothic16', sans-serif;
-    font-size: 18px;
-    transition: transform 0.2s ease, color 0.2s ease;
-    display: inline-block;
-
-    border: 1px solid #e0e0e0;
-    padding: 0.2rem;
-    background-color: #1f1f1f;
-    box-shadow: 0 0 0 4px #121212;
-}
-
-.div-rigth a:hover {
-    color: #e400ce;
-    transform: scale(1.2);
-}
-
-
-.class-nav-header ul {
-    display: flex;
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0px;
-    margin: 0px;
-    align-items: center;
-    
-}
-
-
-
-
-
-.div-rigth ul {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 24px;
+h5 {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    font-family: inherit;
+    line-height: 1.1;
+    margin-top: 10px;
     font-weight: 600;
-    margin: 0;
-    padding: 0;
+    color: #6608be;
+    font-size: 2.3rem;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 
-.class-nav-header li {
-    margin: 0 25px;
-}
-
-
-.div-contenedor-img-circulo {
-    position: relative;
-    width: 500px;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Círculo exterior desenfocado */
-.contorno {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    border: 50px solid #e0e0e0;
-    filter: blur(50px);    
-    z-index: 0;
-
-    
-    
-}
-
-/* Círculo interior visible */
-.eclipse {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    border: 37px solid rgba(31, 31, 31, 0.5); /* cian neón translúcido */
-    z-index: 1;
-}
-
-/* Imagen en el centro */
-.imagen-perfil {
-    width: 350px;
-    height: 500px;
-    background: url(./assets/img/1-removebg-preview.png) no-repeat center/cover;
-    border-radius: 200px;
-    z-index: 0;
-    filter: brightness(0.6); /* 1 es normal, <1 más oscuro, >1 más claro */
-}
-
-/*Footer*/
-.footer {
-    width: 100%;
-    height: 10%;
-    padding: 20px 60px;
-    display: flex;
-    justify-content: space-between; /* separa izquierda y derecha */
-    align-items: center;
-    flex-wrap: wrap; /* por si en pantallas chicas se rompe */
-}
-
-.bloque-nombre {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* alinea el texto a la izquierda */
+/* Redes sociales */
+.social-links a {
     color: #fff;
-    
-    border: 2px solid #e0e0e0;
-    padding: 0.2rem;
-    background-color: #1f1f1f;
-    box-shadow: 0 0 0 4px #121212;
+    margin: 0 15px;
+    font-size: 2rem;
+    transition: color 0.3s;
 }
 
-.nombre-mio {
-    margin: 2px 0;
-    font-family: 'DotGothic16', sans-serif;
-    font-size: 16px;
-}
-
-.redes-sociales {
-    display: flex;
-    gap: 20px;
-    
-    border: 2px solid #e0e0e0;
-    padding: 0.4rem;
-    background-color: #1f1f1f;
-    box-shadow: 0 0 0 4px #121212;
-}
-
-    .redes-sociales a {
-        
-    color: #fff;
-    font-size: 24px;
-    text-decoration: none;
-    transition: transform 0.2s, color 0.2s;
+.social-links a:hover {
+  color: #6608be;; /* Cambia de color al pasar el mouse */
 }
 
 
-.redes-sociales a:hover {
-    color: #e400ce;
-    transform: scale(1.2);
-}
-
-/* Línea vertical entre los dos bloques */
-.linea-separadora {
-    width: 80%;
-    height: 2px;
-    background-color: #e400ce;
-    border-radius: 2px;
-
-    border: 0.5px solid #e0e0e0;
-    padding: 0.1rem;
-    background-color: #1f1f1f;
-    box-shadow: 0 0 0 4px #121212;
-}
-
-.violeta {
-    color: #e400ce; /* o el violeta que prefieras */
-    font-weight: bold;
-}
-
-#particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    z-index: -1;
-    top: 0;
-    left: 0;
-}
-
-/* Cuadro centrado donde va la info, arranca oculto */
-#cuadro-central {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.95); /* combinamos ambos en una sola línea */
-    
-    width: 80vw;
-    height: 80vh;
-    /*background-color: #42214b;*/
-    border-radius: 16px;
-    /*padding: 20px;*/
-    /*box-shadow: 0 0 30px rgba(255, 0, 200, 0.3);*/
-    
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-    opacity: 0;
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    pointer-events: none;
-
-
-    border: 2px solid #e0e0e0;
-    padding: 1rem;
-    background-color: #1f1f1f;
-    box-shadow: 0 0 0 4px #121212;
-}
-
-#cuadro-central.visible {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1); /* misma transformación combinada */
-    pointer-events: auto;
-}
-
-.oculto {
-    display: none;
-}
-
-.contenido-cuadro {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-    transition: opacity 0.3s ease;
-}
-
-.texto-seccion {
-    flex-grow: 1;
-    overflow-y: auto;
-}
-
-
-.barra-lateral {
-    width: 200px;
-    height: 100%;
-    border-right: 1px solid #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between; /* distribuye todo uniformemente */
-    padding: 20px 10px;
-    flex-shrink: 0;
-}
-
-.mini-seccion {
-  font-size: 30px; /* tamaño más grande */
-    color: #ccc;
+.logomurasa {
+    width: 500px;
+    height: 500px;
+    padding: 50px;
     cursor: pointer;
-    padding: 10px;
-    border-radius: 8px;
-    transition: background 0.3s, color 0.3s, transform 0.3s;
 }
 
-.mini-seccion:hover {
+.scroll-down {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 2rem;
     color: #fff;
-    transform: scale(1.2);
+    cursor: pointer;
+    animation: bounce 2s infinite;
 }
 
-.mini-seccion.activo {
-    background-color: #ff00cc;
-    color: white;
-    box-shadow: 0 0 10px #ff00cc88;
+/* Animación de rebote */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(10px); }
+    60% { transform: translateY(5px); }
 }
 
-.foto-perfil {
+/* Sección sobre mí */
+#sobre-mi {
+    display: flex;                 /* activa flexbox */
+    justify-content: center;       /* centra horizontal */
+    align-items: center;           /* centra vertical */
+    min-height: 100vh;             /* ocupa toda la altura de la ventana */
+    padding: 20px;                 /* espacio interno opcional */
+    background-color: #1e1e2f;     /* color de fondo de la sección */
+    color: #fff;                   /* color del texto */
+    text-align: center;            /* centra texto dentro del div */
+}
+
+/* Contenido interno */
+.div-sobre-mi {
+    max-width: 800px;              /* ancho máximo para que no se extienda demasiado */
+    line-height: 1.6;              /* separación de líneas */
+    font-size: 1.1rem;
+    padding: 20px;
+    border-radius: 10px;           /* opcional, bordes redondeados */
+    background-color: rgba(0,0,0,0.3); /* opcional, fondo semi-transparente */
+}
+
+.mi-foto {
     width: 200px;
     height: 200px;
     margin-right: 20px;
@@ -332,44 +127,9 @@ main {
     object-fit: cover;
     border: 1px solid #333;;
     box-shadow: 0 0 8px solid #333;;
-
 }
 
-.menu-iconos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 100%; /* ocupa todo el espacio disponible */
-    flex-grow: 1;
-    margin-top: 20px;
+hr {
+    border-top: 1px solid #3C96DC;
 }
 
-.contenido-cuadro {
-    display: flex;
-    justify-content: center;  /* Centrado horizontal */
-    align-items: center;      /* Centrado vertical */
-    width: 100%;
-    height: 100%;
-    transition: opacity 0.3s ease;
-    overflow-y: auto;
-    padding: 20px;
-}
-
-.texto-seccion {
-    max-width: 600px;
-    text-align: center;
-}
-
-#slime-overlay {
-    position: fixed;
-    width: 40px;
-    height: 40px;
-    background-color: #1f1f1f;
-    border-radius: 50%;
-    z-index: 9999;
-    transform: scale(1);
-    opacity: 0;
-    transition: all 0.6s ease;
-    pointer-events: none;
-}

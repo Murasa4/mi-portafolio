@@ -6,7 +6,7 @@
     <meta name="description" content="Portafolio personal. Explora mis proyectos y habilidades.">
     <meta name="keywords" content="portafolio, proyectos, habilidades, desarrollo web">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Portafolio Web</title>
+    <title>I'm Jonathan</title>
 
     <!-- Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,79 +31,42 @@
 
 </head>
 <body>
-
-    <div id="particles-js"></div>
-
-
-    <header class="class-header">
-            <nav class="class-nav-header">
-        <div class="logo-left">
-        <h1>Murasa</h1>
-        </div>
-
-        <ul class="div-rigth">
-        <li><a href="#" onclick="mostrarSeccion('home', event)">Home</a></li>
-        <li><a href="#" onclick="mostrarSeccion('about', event)">About me</a></li>
-        <li><a href="#" onclick="mostrarSeccion('projects', event)">Projects</a></li>
-        <li><a href="#" onclick="mostrarSeccion('herramientas', event)">Tools</a></li>
-
-        <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-    </header>
-
-    <main>
-        <div id="inicio" class="div-contenedor-img-circulo">
-                    <img src="./assets/img/1-removebg-preview.png" alt="Foto Perfil JDLS" class="imagen-perfil" />
-                    <div class="eclipse"></div>
-                    <div class="contorno"></div>
-        </div>
-
-
-        <div id="cuadro-central">
-            <div class="barra-lateral">
-                <img src="assets/img/1-removebg-preview.png" alt="Foto de perfil" class="foto-perfil">
-
-                <div id="mini-about" class="mini-seccion" title="About Me" onclick="mostrarSeccion('about')">
-                    <i class="fas fa-user-circle"></i>
-                </div>
-                <div id="mini-projects" class="mini-seccion" title="Projects" onclick="mostrarSeccion('projects')">
-                    <i class="fa-solid fa-house-laptop"></i>
-                </div>
-                <div id="mini-herramientas" class="mini-seccion" title="herramientas" onclick="mostrarSeccion('herramientas')">
-                    <i class="fa-solid fa-screwdriver-wrench"></i>
-                </div>
-
-                <div id="mini-certificado" class="mini-seccion" title="certificado" onclick="mostrarSeccion('certificado'), event">
-                    <i class="fa-solid fa-medal"></i>
-                </div>
-            </div>
-
-            <div class="contenido-cuadro" id="contenido-cuadro"></div>
-        </div>
-
-    </main>
     
+    <section class="contenedor">
+            
 
-    <footer class="footer">
-            <div class="bloque-nombre">
-            <p class="nombre-mio">Jonathan De Los Santos</p>
-            <p class="nombre-mio">
-                <span class="violeta">From</span> <span class="violeta">IN</span> Uruguay
-            </p>
-            </div>
+        <h5>HOLA</h5>
+        <h1>Soy Jonathan De Los Santos</h1>
+    <div class="social-links">
+        <a href="https://instagram.com/jona_dls4" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com/in/jonathandls4444" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/Murasa4" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
 
-            <div class="linea-separadora"></div>
-
-            <div class="redes-sociales">
-            <a href="https://instagram.com/jona_dls4" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://linkedin.com/in/jonathandls4444" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com/Murasa4" target="_blank"><i class="fab fa-github"></i></a>
-            </div>
-    </footer>
+                <img src="./assets/icons/logomurasa.png" alt="logomurasa" class="logomurasa">
 
 
-    <div id="slime-overlay"></div>
+
+    <!-- Icono para scroll -->
+    <a href="#sobre-mi" class="scroll-down">
+        <i class="fas fa-chevron-down"></i>
+    </a>
+
+    </section>
+
+
+        <!-- Sección de destino -->
+    <section id="sobre-mi">
+        <div class="div-sobre-mi">
+            <img src="./assets/img/me.png" alt="imagen personal" class="mi-foto">
+            <h2>Sobre mí</h2>
+            <hr>
+            <p>Hola, Soy Jonathan, un apasionado de la tecnología y la programación. Me gusta aprender cosas nuevas, experimentar, y probar ideas que me permitan crear proyectos útiles y divertidos.
+                Me encanta enfrentar retos, mejorar mis habilidades día a día y seguir creciendo mientras trabajo en proyectos que me motivan.</p>
+        </div>
+    </section>
+
+
 </body>
 </html>
 
