@@ -1,59 +1,62 @@
-// Modal para mini-proyectos
-const modal = document.getElementById('modal-proyecto');
-const modalImg = document.getElementById('modal-img');
-const closeBtn = document.querySelector('.close');
-const prevBtn = document.getElementById('prev');
-const nextBtn = document.getElementById('next');
+// certificados
+document.addEventListener('DOMContentLoaded', function() {
+    if (!document.querySelector('.overlay')) {
+        createModal();
+    }
+    
 
-let currentImages = [];
-let currentIndex = 0;
-
-// Abrir modal al click en card o miniatura
-document.querySelectorAll('.mini-proyecto-card').forEach(card => {
-    const thumbs = card.querySelectorAll('.thumb');
-
-    // Click en la card
-    card.addEventListener('click', (e) => {
-        // Evitar que se abra doble al click en miniaturas o GitHub
-        if(e.target.classList.contains('thumb') || e.target.classList.contains('github-link') || e.target.tagName === 'I') return;
-        currentImages = JSON.parse(card.getAttribute('data-images'));
-        currentIndex = 0;
-        modal.style.display = 'flex';
-        modalImg.src = currentImages[currentIndex];
-    });
-
-    // Click en miniaturas
-    thumbs.forEach((thumb, index) => {
-        thumb.addEventListener('click', (e) => {
-            e.stopPropagation(); // evitar abrir modal de card
-            currentImages = JSON.parse(card.getAttribute('data-images'));
-            currentIndex = index;
-            modal.style.display = 'flex';
-            modalImg.src = currentImages[currentIndex];
+    const overlay = document.querySelector('.overlay');
+    const overlayImg = document.querySelector('.overlay-img');
+    const closeBtn = document.querySelector('.overlay .close');
+    
+    const certificateImages = document.querySelectorAll('.card-proyecto-certificado img');
+    
+    certificateImages.forEach(img => {
+        img.addEventListener('click', function(e) {
+            e.stopPropagation(); // Evita que se propague al contenedor
+            openModal(this.src, this.alt);
         });
     });
+    
+    // Función para abrir el modal
+    function openModal(imageSrc, imageAlt) {
+        overlayImg.src = imageSrc;
+        overlayImg.alt = imageAlt;
+        overlay.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Bloquea scroll del body
+    }
+    
+    // Función para cerrar el modal
+    function closeModal() {
+        overlay.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Restaura scroll del body
+    }
+    
+    // Event listeners para cerrar el modal
+    closeBtn.addEventListener('click', closeModal);
+    
+    // Cerrar al hacer clic fuera de la imagen
+    overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) {
+            closeModal();
+        }
+    });
+    
+    // Cerrar con la tecla Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && overlay.style.display === 'flex') {
+            closeModal();
+        }
+    });
 });
 
-// Cerrar modal
-closeBtn.addEventListener('click', () => modal.style.display = 'none');
-
-// Navegación
-prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
-    modalImg.src = currentImages[currentIndex];
-});
-nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % currentImages.length;
-    modalImg.src = currentImages[currentIndex];
-});
-
-
-
-
-
-
-
-
-
-
-
+// Función para crear el modal dinámicamente
+function createModal() {
+    const modal = document.createElement('div');
+    modal.className = 'overlay';
+    modal.innerHTML = `
+        <span class="close">&times;</span>
+        <img class="overlay-img" src="" alt="">
+    `;
+    document.body.appendChild(modal);
+}
