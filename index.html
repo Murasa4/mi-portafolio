@@ -2,132 +2,268 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <meta name="description" content="Portafolio personal. Explora mis proyectos y habilidades.">
-    <meta name="keywords" content="portafolio, proyectos, habilidades, desarrollo web">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I'm Jonathan</title>
 
-    <!-- Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
-
-    <!-- css y js -->
-    <link rel="stylesheet" href="style/main.css">
-    <script src="scripts/main.js" defer></script>
-
-    <!-- Font Awesome CDN -->
-<link 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
-    rel="stylesheet"  type='text/css'>
-
-    <!-- Particles.js CDN -->
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-
-<link rel="icon" type="image/png" href="./assets/icons/iconoweb.png" />
-
-
+    <link rel="stylesheet" href="style/style.css">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="scripts/main.js"></script>
 </head>
 <body>
-    
-    <section class="contenedor">
+
+    <header class="header">
+
+        <a href="#home" class="logo">
+            Mur<span>asa</span>
+        </a>
+
+        <i class="bx bx-menu" id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home">Inicio</a>
+            <a href="#about">Sobre Mí</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#certificado">Certificados</a>
+            <a href="#contact">Contacto</a>
+        </nav>
+
+        <button class="boton-contact">Contactame</button>
+
+    </header>
+
+        <section class="home" id="home">
+
+            <div class="home-contenido">
+                <h1>Hola, soy <span>Jonathan</span></h1>
+                <h3>(Murasa para los amigos)</h3>
+                <p>
+                    Mi pequeño espacio para documentar mis progresos y nuevos conocimientos
+                </p>
+                <br>
+                <p><span>"Do you believe in gravity?"</span></p>
             
+                <div class="social-icons">
+                    <a href="https://instagram.com/jona_dls4" target="_blank">
+                        <i class="bx bxl-instagram" ></i>
+                    </a>
 
-        <h5>HOLA</h5>
-        <h1>Soy Jonathan De Los Santos</h1>
-    <div class="social-links">
-        <a href="https://instagram.com/jona_dls4" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://linkedin.com/in/jonathandls4444" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/Murasa4" target="_blank"><i class="fab fa-github"></i></a>
-    </div>
+                    <a href="https://github.com/Murasa4" target="_blank">
+                        <i class='bx bxl-github'></i>
+                    </a>
 
-                <img src="./assets/icons/logomurasa.png" alt="logomurasa" class="logomurasa">
-
-
-
-        <!-- Icono para scroll -->
-        <a href="#sobre-mi" class="scroll-down">
-            <i class="fas fa-chevron-down"></i>
-        </a>
-
-    </section>
-
-
-        <!-- Sección de destino -->
-    <section id="sobre-mi">
-        <div class="div-sobre-mi">
-            <img src="./assets/img/me.png" alt="imagen personal" class="mi-foto">
-            <h2>Sobre mí</h2>
-            <hr>
-            <p>Hola, Soy Jonathan, un apasionado de la tecnología y la programación. Me gusta aprender cosas nuevas, experimentar, y probar ideas que me permitan crear proyectos útiles y divertidos.
-                Me encanta enfrentar retos, mejorar mis habilidades día a día y seguir creciendo mientras trabajo en proyectos que me motivan.</p>
-        </div>
-
-                <!-- Icono para scroll -->
-        <a href="#proyectos1" class="scroll-down">
-            <i class="fas fa-chevron-down"></i>
-        </a>
-    </section>
-
-
-
-<div class="secciones-pantalla">
-    <!-- Sección Proyectos -->
-    <section class="proyectos">
-        <h2>Proyectos</h2>
-        <div id="proyectos1" class="lista-proyectos">
-            <div class="proyecto-card">Proyecto 1</div>
-        </div>
-    </section>
-
-    <!-- Sección Mini Proyectos -->
-    <section class="mini-proyectos">
-        <h2>Mini Proyectos</h2>
-        <div class="lista-mini-proyectos">
-
-            <div class="mini-proyecto-card" data-images='["https://github.com/Murasa4/piedra_papel_tijera/raw/main/Score.jpg","https://github.com/Murasa4/piedra_papel_tijera/raw/main/menuInicial.jpg", "https://github.com/Murasa4/piedra_papel_tijera/raw/main/menuResultado.jpg"]'>
-                <h3>Piedra, papel o tijera</h3>
-                <!-- Miniaturas -->
-                <div class="thumbnails">
-                    <img src="https://github.com/Murasa4/piedra_papel_tijera/raw/main/Score.jpg" alt="Mini 1" class="thumb">
-                    <img src="https://github.com/Murasa4/piedra_papel_tijera/raw/main/menuInicial.jpg" alt="Mini 2" class="thumb">
-                    <img src="https://github.com/Murasa4/piedra_papel_tijera/raw/main/menuResultado.jpg" alt="Mini 3" class="thumb">
-                    
-                </div>
-                <div class="tech-icons">
-                    <img src="./assets/icons/java.svg" alt="Java" title="Java">
-                    <img src="./assets/icons/intellij.svg" alt="intellij" title="intellij">
-                    <a href="https://github.com/Murasa4/piedra_papel_tijera" target="_blank" class="github-link">
-                        <i class="fab fa-github"></i>
+                    <a href="https://linkedin.com/in/jonathandls4444" target="_blank">
+                        <i class="bxl bx-linkedin"></i>
                     </a>
                 </div>
 
+
+                <div class="grupo-botones">
+                    <a href="#" class="boton">CV</a>
+                    <a href="#contact" class="boton">Contacto</a>
+                </div>
+            
             </div>
 
-            
+
+            <div class="home-img">
+                <img src="./assets/img/jojojona1.jpg" alt="FotoInicio">
+            </div>
+
+        </section>
+
+
+        <section class="about" id="about">
+            <div class="about-img">
+                <img src="./assets/img/me.png" alt="Foto Personal">
+            </div>
+
+
+            <div class="about-contenido">
+                <h2>Sobre <span>Mí</span></h2>
+                <p>Soy un aprendiz constante, me gusta la programación, videojuegos y estar en constante desarollo de mis habilidades, siempre en busca de nuevos desafíos que me permitan crecer profesionalmente y como persona. Me motiva la constante evolución de la tecnología y disfruto explorando diferentes lenguajes y herramientas y encontrarme con duras pruebas.</p>
+                <a href="#" class="boton">Leer más</a>
+            </div>
+        </section>
 
 
 
+        <section class="projects" id="projects">
 
-            <div class="mini-proyecto-card">Mini 2</div>
-            <div class="mini-proyecto-card">Mini 3</div>
-            <div class="mini-proyecto-card">Mini 4</div>
-            <div class="mini-proyecto-card">Mini 5</div>
+            <h2 class="cabecera">Proyectos</h2>
+
+            <div class="div-proyectos">
+
+                <div class="card-proyecto">
+                    <img src="./assets/logomurasa.png" alt="Proyecto 1">
+                    
+                    <h3>Proyecto 1</h3>
+                    <p>info del proyecto</p>
+                    <div class="boton">Ir a repositorio</div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+
+            <h2 class="cabecera">Mini Proyectos</h2>
+
+            <div class="div-proyectos">
+
+                <div class="card-proyecto">
+                    <img src="./assets//miniproyectos/tateti.jpg" alt="tateti">
+                    
+                    <h3>Tateti en Java</h3>
+                    <p>Mini juego de tateti realizado en Java</p>
+                    
+                    <div class="social-icons">
+                    <a>
+                        <i class="bxl bx-java"></i>
+                    </a>
+                    <a>
+                        <i class='bx bxl-visual-studio'></i>
+                    </a>
+                    </div>
+
+                    <a href="https://github.com/Murasa4/piedra_papel_tijera" target="_blank" class="boton">Ir a repositorio</a>
+                </div>
+
+            </div>
+        </section>
+
+        
+    <section class="certificado" id="certificado">
+
+        <h2 class="cabecera">Certificados</h2>
+
+    <div class="div-proyectos-certificado">
+
+        <div class="card-proyecto-certificado">
+            <img src="./assets/certificados/postman_testertestarudo_certificate.jpg" 
+                alt="postman_testertestarudo_certificate" 
+                class="img-certificado">
+            <h3>Curso Introductorio de Postman</h3>
+            <p>TesterTestarudo</p>
         </div>
-    </section>
-</div>
 
+        <div class="card-proyecto-certificado">
+            <img src="./assets/certificados/JavaScriptEssentials1Cisco.jpg" 
+                alt="JavaScriptEssentials1Cisco" 
+                class="img-certificado">
+            <h3>JavaScript Essentials 1 de Cisco</h3>
+            <p>Cisco Networking Academy</p>
+        </div>
 
-<!-- Modal para imágenes -->
-<div id="modal-proyecto" class="modal">
+        <div class="card-proyecto-certificado">
+            <img src="./assets/certificados/_certificate_jonathan-delossantos-estudiantes-utec-edu-uy ciscojs1.jpg" 
+                alt="JavaScriptEssentials1Cisco" 
+                class="img-certificado">
+            <h3>JavaScript Essentials Cisco/Utec</h3>
+            <p>Cisco Networking Academy</p>
+        </div>
+
+        <div class="card-proyecto-certificado">
+            <img src="./assets/certificados/todocode_bdrelacionales.jpg" 
+                alt="todocode_bdrelacionales" 
+                class="img-certificado">
+            <h3>Base de Datos Relacionales</h3>
+            <p>TodoCode Academy</p>
+        </div>
+
+        <div class="card-proyecto-certificado">
+            <img src="./assets/certificados/todocode_gitandgithub.jpg" 
+                alt="todocode_gitandgithub" 
+                class="img-certificado">
+            <h3>Git y Github</h3>
+            <p>TodoCode Academy</p>
+        </div>
+
+        <div class="card-proyecto-certificado">
+            <img src="./assets/certificados/todocode_introalgoritmo.jpg" 
+                alt="todocode_introalgoritmo" 
+                class="img-certificado">
+            <h3>Introducción a los Algoritmos</h3>
+            <p>TodoCode Academy</p>
+        </div>
+
+        <div class="card-proyecto-certificado">
+            <img src="./assets/certificados/todocode_javaprincipiantes.jpg" 
+                alt="todocode_javaprincipiantes" 
+                class="img-certificado">
+            <h3>Java para Principiantes</h3>
+            <p>TodoCode Academy</p>
+        </div>
+
+    </div>
+</section>
+<!-- Overlay para ver imagen en grande -->
+<div id="overlay" class="overlay">
     <span class="close">&times;</span>
-    <img id="modal-img" src="" alt="Referencia del proyecto">
-    <button id="prev">◀</button>
-    <button id="next">▶</button>
+    <img class="overlay-img" id="overlay-img" src="" alt="certificado ampliado">
 </div>
+
+
+
+        <section class="contact" id="contact">
+            <h2 class="cabecera">Contact<span>acto</span></h2>
+
+
+            <form action="#">
+                <div class="input-grupo">
+                    <div class="input-box">
+                        <input type="text" placeholder="Nombre">
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="input-box">
+                        <input type="number" placeholder="Telefono">
+                        <input type="text" placeholder="Asunto">
+                    </div>
+                </div>
+
+                <div class="input-grupo2">
+                    <textarea name="" id="" placeholder="Mensaje..." cols="30" rows="10"></textarea>
+                    <input type="submit" value="Enviar" class="boton">
+                </div>
+            </form>
+        </section>
+
+
+        <footer class="footer">
+                <div class="social-icons">
+                    <a href="https://instagram.com/jona_dls4" target="_blank">
+                        <i class="bx bxl-instagram" ></i>
+                    </a>
+
+                    <a href="https://github.com/Murasa4" target="_blank">
+                        <i class='bx bxl-github'></i>
+                    </a>
+
+                    <a href="https://linkedin.com/in/jonathandls4444" target="_blank">
+                        <i class="bxl bx-linkedin"></i>
+                    </a>
+                </div>
+
+
+                <ul class="lista">
+                    <li>
+                        <a href="#about">Sobre mí</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Proyectos</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contacto</a>
+                    </li>
+                </ul>
+
+
+                <p class="copyright">
+                        © Jonathan De Los Santos | All Rights Reserved
+                </p>
+        </footer>
 
 </body>
 </html>
-
